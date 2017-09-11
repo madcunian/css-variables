@@ -20,3 +20,7 @@ img {
   background: var(--base);
   filter: blur(var(--blur));
 }
+
+.highlight {
+  color: var(--base);
+}
