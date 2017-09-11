@@ -1,8 +1,22 @@
+/* Variables */
 :root {
   --base: #ffc600;
   --spacing: 10px;
   --blur: 10px;
 }
+
+.highlight {
+  color: var(--base);
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  margin-top: 50px;
+}
+
+/* Just styles */
 
 body {
   text-align: center;
@@ -12,15 +26,39 @@ body {
 
 input[type="range"] {
   cursor: pointer;
+  margin: 0 10px;
+  -webkit-appearance: none;
 }
 
-img {
-  margin: 50px auto 0;
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 2px;
+  background: #999;
+  border: none;
+  border-radius: 3px;
+  margin-top: -10px;
 }
 
-.highlight {
-  color: var(--base);
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #999;
+  margin-top: -5px;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 23px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  margin-top: 3px;
 }
